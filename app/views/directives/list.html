@@ -1,0 +1,36 @@
+<div class="panel panel-default" style="margin: 0px 0px;">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-sm-8">
+                <h5>{{title}}</h5>
+            </div>
+            <div class="col-sm-4 text-right">
+                <span class="badge badge-warning" style="font-size: 20px; background-color: #ed872f;">{{list.length}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body no-padding">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="node in list | orderBy : 'date' : true">
+                <div class="row">
+                    <h4 class="col-sm-8" style="margin: 0px 0px 12px 0px;">{{node.name}}</h4>
+                    <div class="col-sm-4 text-right text-muted">
+                        {{node.date| date}}
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                </div>
+
+                <small class="block text-muted">
+                    <ol class="breadcrumb">
+                        <li>
+                            {{getCustomer(node.id).name}}
+                        </li>
+                        <li>
+                            {{getParent(node.id).name}}
+                        </li>
+                    </ol>
+                </small>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "name": "ng-se-simple-alerts",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "author": "Kim Schneider <kim.schneider@server-eye.de>",
+  "description": "Server-Eye simple alerts overview",
+  "contributors": [
+    {
+      "name": "Kim Schneider",
+      "email": "kim.schneider@server-eye.de"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Server-Eye/ng-se-simple-alerts.git"
+  },
+  "dependencies": {
+    "webserver": "^1.1.2"
+  },
+  "analyze": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "private": true
+}

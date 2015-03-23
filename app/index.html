@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="se">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Server-Eye Simple Alerts</title>
+
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+</head>
+
+<body class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-12 text-right" style="margin: 20px 0px;">
+            <img src="img/logo_server-eye_500.png" style="width: 180px;" />
+        </div>
+    </div>
+
+    <div class="row" ng-controller="MainController">
+        <div class="col-sm-12" ng-show="error">
+            <div class="alert alert-danger" role="alert">{{ error.statusText || error.message }}</div>
+        </div>
+        
+        <div class="col-sm-12 text-center" style="margin: 40px" ng-show="!yeah && !error">
+            <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+        
+        <div class="col-sm-6" ng-show="yeah && !error">
+            <se-list title="Errors" list="errors"></se-list>
+        </div>
+
+        <div class="col-sm-6" ng-show="yeah && !error">
+            <se-list title="Working" list="working"></se-list>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- Main Angular scripts-->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <!-- Server-Eye plugins -->
+    <script src="/bower_components/ng-se-api/dist/ng-se-api.js"></script>
+
+    <!-- Anglar App Script -->
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/services.js"></script>
+
+    <script src="js/main/MainController.js"></script>
+
+</body>
+
+</html>
