@@ -1,7 +1,7 @@
 {
   "name": "ng-se-simple-alerts",
   "preferGlobal": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Kim Schneider <kim.schneider@server-eye.de>",
   "description": "Server-Eye simple alerts overview",
   "contributors": [
